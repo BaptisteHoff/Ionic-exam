@@ -1,0 +1,40 @@
+<!--
+  Generated template for the MusicsListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Mes Musiques</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <h2>Ajouter une musique</h2>
+ <button ion-button (click)="onGoToCreate()">Ajouter</button>
+
+ <h2>Liste de mes musiques</h2>
+
+ <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let music of musics"> 
+        <ion-list (click)="onGoToMusic(music.data.title, music.id)">
+          <ion-item>
+            <img [src]="music.data.img" [alt]="music.data.title">
+          </ion-item>
+          <ion-item>
+            {{ music.data.title }}
+          </ion-item>
+          <ion-item>
+            {{ music.data.autor }}
+          </ion-item>
+          <ion-item>
+            {{ music.data.year }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

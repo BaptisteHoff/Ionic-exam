@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ajout d'une Musique</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Image URL</ion-label>
+    <ion-input type="text" [(ngModel)]="music.img"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Titre</ion-label>
+    <ion-input type="text" [(ngModel)]="music.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Auteur</ion-label>
+    <ion-input type="text" [(ngModel)]="music.autor"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date de l'auteur</ion-label>
+    <ion-input type="text" [(ngModel)]="music.year"></ion-input>
+  </ion-item>
+  <br>
+
+  <div class="text-center">
+    <button ion-button (click)="onAdd()">Ajouter</button>
+  </div>
+
+</ion-content>
